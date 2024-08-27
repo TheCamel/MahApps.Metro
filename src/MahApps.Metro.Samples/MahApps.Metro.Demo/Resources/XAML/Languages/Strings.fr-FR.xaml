@@ -1,0 +1,654 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:s="clr-namespace:System;assembly=mscorlib"
+	>
+
+	<!-- ###################### FORMATS ###################### -->
+
+	<s:String x:Key="Formats.ShortDatePattern"							>dd/MM/yyyy</s:String>
+	<s:String x:Key="Formats.ShortTimePattern"							>HH:mm:ss</s:String>
+	<s:String x:Key="Formats.DateTimePattern"							>dd/MM/yyyy HH:mm:ss</s:String>
+
+	<!-- ###################### CONTAINER ###################### -->
+
+	<s:String x:Key="Sys.RefreshTimer"									>Rafraichissement dans {0} seconde(s)</s:String>
+
+	<s:String x:Key="Container.Cultures"								>Cultures</s:String>
+	<s:String x:Key="Container.Levels"									>Notifications</s:String>
+	<s:String x:Key="Container.Profils"									>Profils</s:String>
+	<s:String x:Key="Container.Settings"								>Préférences : </s:String>
+	<s:String x:Key="Container.Themes"									>Thèmes</s:String>
+	<s:String x:Key="Container.Accent"									>Couleurs</s:String>
+	<s:String x:Key="Container.ConnectionLost"							>Connexion perdue à l'API ou à la base de données ! Tentative de reconnexion...</s:String>
+
+	<!-- ###################### DIALOGS ###################### -->
+	<!-- Dialog -->
+	<s:String x:Key="Dialog.OK"											>OK</s:String>
+	<s:String x:Key="Dialog.Cancel"										>Annuler</s:String>
+	<s:String x:Key="Dialog.Yes"										>Oui</s:String>
+	<s:String x:Key="Dialog.No"											>Non</s:String>
+
+	<!-- DialogSiteSelect -->
+	<s:String x:Key="DialogSiteSelect.Title"							>Sélectionner un site...</s:String>
+
+	<!-- ###################### DIALOGS ###################### -->
+
+	<!-- PromptDialog ; Assign; Consider  -->
+	<s:String x:Key="PromptDialog.Assign.BoxTitle"						>Assigner</s:String>
+	<s:String x:Key="PromptDialog.Consider.Label"						>Prise en compte</s:String>
+	<s:String x:Key="PromptDialog.Watermark"							>Veuillez saisir le texte ici.</s:String>
+	<s:String x:Key="PromptDialog.Assign.Watermark"						>Veuillez saisir le nom de l'agent ici.</s:String>
+	<s:String x:Key="PromptDialog.Consider.Watermark"					>Veuillez saisir le commentaire ici.</s:String>
+	<s:String x:Key="PromptDialog.CommentTitle"							>Veuillez saisir l'intitulé du commentaire ici.</s:String>
+
+
+	<!-- ###################### MESSAGES ###################### -->
+
+	<s:String x:Key="Message.Inform"									>Information</s:String>
+	<s:String x:Key="Message.Question"									>Question</s:String>
+	<s:String x:Key="Message.Error"										>Une erreur est survenue...</s:String>
+
+	<s:String x:Key="Message.UpdaterStart"								>Une nouvelle version est disponible. Fermer le dialogue pour démarrer le process de mise à jour.</s:String>
+	<s:String x:Key="Message.UpdaterProgress"							>Téléchargement et mise à jour, veuillez patienter...</s:String>
+
+	<s:String x:Key="Message.EnterLabel"								>Saisir l'intitulé...</s:String>
+	<s:String x:Key="Message.NewRule"									>Saisir l'intitulé de la règle</s:String>
+	<s:String x:Key="Message.NewMail"									>Saisir le mail</s:String>
+	
+	<s:String x:Key="Message.PriseEnCompte"								>Commentaire de la prise en compte...</s:String>
+	<s:String x:Key="Message.ConfirmSchedule"							>Merci de confirmer l'application de cette programmation...</s:String>
+	<s:String x:Key="Message.SaveBefore"								>Sauvegarder avant ?</s:String>
+	<s:String x:Key="Message.NoStationMap"								>Aucun plan de site déclaré !</s:String>
+	<s:String x:Key="Message.ProfileDeleteImpossible"					>Un ou plusieurs objets sont associés à ce profil, supprimez les associations avant de le supprimer</s:String>
+	<s:String x:Key="Message.SiteLinked"								>Le site est lié à un ou plusieurs profils...</s:String>
+	<s:String x:Key="Message.ObjectDeleted"								>Objet supprimé...</s:String>
+	<s:String x:Key="Message.DeleteError"								>Suppression impossible; la donnée est utilisé.</s:String>
+	<s:String x:Key="Message.PassExpired"								>Mot de passe expiré... Pensez à renouveler votre mot de passe !</s:String>
+	<s:String x:Key="Message.UseDefaultPlan"							>Souhaitez-vous utiliser le plan par défaut ?</s:String>
+	<s:String x:Key="Message.LoadingInBackground"						>Chargement des contenus en arrière plan...</s:String>
+	<s:String x:Key="Message.BackgroundLoaded"							>Contenu téléchargé !</s:String>
+	<s:String x:Key="Message.LanguageNeeded"							>Au moins une langue affichée et par défaut doit être sélectionnée...</s:String>
+	<s:String x:Key="Message.CommandDone"								>Commande éffectuée...</s:String>
+	<s:String x:Key="Message.DataNotSaved"								>Attention, vous quitez un écran avec des données non sauvegardées...</s:String>
+
+	<s:String x:Key="Message.ErrorDdpCoordonneeSite"					>Une erreur est survenue sur le site "{0}", vérifiez la donnée (les caractères spéciaux sont interdits).</s:String>
+	<s:String x:Key="Message.ErrorDdpCoordonneeSites"					>Une erreur est survenue sur les sites suivants, vérifiez les données (les caractères spéciaux sont interdits) : {0}</s:String>
+	<s:String x:Key="Message.SameSchedule"								>Une programmation de même type existe déjà !</s:String>
+
+	<s:String x:Key="Message.RemotesConfirmation"						>Confirmez-vous l'émission de la télécommande suivante ?</s:String>
+	<s:String x:Key="Message.SynchConfirmation"							>Souhaitez-vous lancer une synchronisation ?</s:String>
+
+	<s:String x:Key="Message.ErrorMapEmpty"								>Attention, vous ne pouvez pas sauvegarder sans définir de carte.</s:String>
+	<s:String x:Key="Message.ErrorPlanEmpty"							>Attention, vous ne pouvez pas sauvegarder sans définir de plan.</s:String>
+
+	<!-- toast-->
+	<s:String x:Key="Message.Toast.Loading"								>Chargement en cours</s:String>
+	<s:String x:Key="Message.Toast.ProcessRunning"						>Traitement en cours</s:String>
+	<s:String x:Key="Message.Toast.ProcessFinished"						>Traitement terminé</s:String>
+	<s:String x:Key="Message.Toast.ProcessError"						>Traitement en échec</s:String>
+	<s:String x:Key="Message.ImportSuccess"								>Le fichier a été importé avec succcès</s:String>
+
+	<s:String x:Key="Message.Toast.RubricRunning"						>Lecture de la rubrique {0} en cours</s:String>
+	<s:String x:Key="Message.Toast.RubricFinished"						>Traitement de {0} terminé</s:String>
+	<s:String x:Key="Message.Toast.RubricWithError"						>Traitement de {0} terminé avec des erreurs</s:String>
+
+	<s:String x:Key="Message.Toast.ChatUserJoin"						>L'utilisateur {0} a rejoint le hub</s:String>
+	<s:String x:Key="Message.Toast.ChatUserSaid"						>L'utilisateur {0} a poster {1}</s:String>
+
+	<!-- tooltip TODO a reprendre-->
+	<s:String x:Key="Message.Inactive.ToolTip"							>L'équipement est inactif</s:String>
+	<s:String x:Key="Message.Offline.ToolTip"							>L'équipement n'est pas raccordé au réseau</s:String>
+	<s:String x:Key="EventData.Restored.ToolTip"						>Évènement/Date restaurée à partir d'une relecture équipement</s:String>
+
+	<!-- ###################### MODELS DATA ###################### -->
+
+	<!-- Events-->
+	<s:String x:Key="EventState.A"										>Apparu</s:String>
+	<s:String x:Key="EventState.E"										>Expiré</s:String>
+	<s:String x:Key="EventState.P"										>Pris en compte</s:String>
+	<s:String x:Key="EventState.D"										>Disparu</s:String>
+	<s:String x:Key="EventState.S"										>Soldé</s:String>
+	<s:String x:Key="EventState.Default"								>Erreur</s:String>
+	
+	<!-- Events-->
+	<s:String x:Key="Event.TypeApparition"								>Apparition</s:String>
+	<s:String x:Key="Event.TypeDisparition"								>Disparition</s:String>
+	<s:String x:Key="Event.CheckDateTime"								>Prise en compte</s:String>
+	<s:String x:Key="Event.CheckOperator"								>Opérateur</s:String>
+	<s:String x:Key="Event.CheckOperatorComment"						>Commentaire</s:String>
+	<s:String x:Key="Event.AknowledgeDateTime"							>Solde</s:String>
+	<s:String x:Key="Event.DisappareanceDateTime"						>Disparition</s:String>
+	<s:String x:Key="Event.AppareanceDateTime"							>Apparition</s:String>
+	<s:String x:Key="Event.PeriodFrom"									>Période du</s:String>
+	<s:String x:Key="Event.To"											>au</s:String>
+
+	<!-- Disconnected -->
+	<s:String x:Key="Disconnected.Unit"									>min(s)</s:String>
+	<s:String x:Key="Disconnected.Traps"								>trap(s)</s:String>
+	<s:String x:Key="Disconnected.Traps.Tooltip"						>Nombre de trap de VIE perdu(s)</s:String>
+	<s:String x:Key="Disconnected.Current.Tooltip"						>Période d'absence courante</s:String>
+	<s:String x:Key="Disconnected.Total.Tooltip"						>Période d'absence totale</s:String>
+
+	<!-- RaisonIndisponibilite -->
+	<s:String x:Key="RaisonIndispo.NoReasons"							>Pas de raison d'indisponibilité</s:String>
+	<s:String x:Key="RaisonIndispo.RI1"									>En intervention</s:String>
+	<s:String x:Key="RaisonIndispo.RI2"									>Hors Service Commercial</s:String>
+	<s:String x:Key="RaisonIndispo.RI3"									>Mode Test</s:String>
+	<s:String x:Key="RaisonIndispo.RI4"									>Désactivé</s:String>
+	<s:String x:Key="RaisonIndispo.RI5"									>Déconnecté Du Maitre</s:String>
+	<s:String x:Key="RaisonIndispo.RI6"									>Arrêt d'urgence</s:String>
+	<s:String x:Key="RaisonIndispo.Inconnu"								>Erreur : la raison d'indisponibilité est inconnue parce que l'état opérationnel reçu n'est pas valide</s:String>
+
+	<!-- État Technique -->
+	<s:String x:Key="EtatTechnique.Title"								>État technique</s:String>
+	<s:String x:Key="EtatTechnique.EnPanne"								>En panne</s:String>
+	<s:String x:Key="EtatTechnique.Degrade"								>Dégradé</s:String>
+	<s:String x:Key="EtatTechnique.Fonctionnel"							>Fonctionnel</s:String>
+	<s:String x:Key="EtatTechnique.Inconnu"								>Inconnu</s:String>
+	<s:String x:Key="EtatTechnique.Blackliste"							>Sur liste noire</s:String>
+
+	<!-- État Operationnel -->
+	<s:String x:Key="EtatOperationnel.Title"							>État operationnel</s:String>
+	<s:String x:Key="EtatOperationnel.Disponible"						>Disponible</s:String>
+	<s:String x:Key="EtatOperationnel.Indisponible"						>Indisponible</s:String>
+	<s:String x:Key="EtatOperationnel.Inconnu"							>Inconnu</s:String>
+
+	<!-- ClassificationEvenement -->
+	<s:String x:Key="Classification.Title"								>Classification</s:String>
+	<s:String x:Key="Classification.EvenementSimple"					>Évènement</s:String>
+	<s:String x:Key="Classification.InformationPreventive"				>Information Preventive</s:String>
+	<s:String x:Key="Classification.AlerteComposantDegrade"				>Alerte composant dégradé</s:String>
+	<s:String x:Key="Classification.AlerteComposantHorsService"			>Alerte composant hors service</s:String>
+	<s:String x:Key="Classification.AlerteEquipementHorsService"		>Alerte équipement hors service</s:String>
+	<s:String x:Key="Classification.AlarmeEquipementHorsService"		>Alarme équipement hors service</s:String>
+
+	<!-- PriseEnCompte -->
+	<s:String x:Key="PriseEnCompte.Title"								>Prise en compte</s:String>
+	<s:String x:Key="PriseEnCompte.TraceInfo"							>Trace et information</s:String>
+	<s:String x:Key="PriseEnCompte.InterventionPlanifier"				>Intervention à planifier</s:String>
+	<s:String x:Key="PriseEnCompte.InterventionUrgence"					>Intervention urgente</s:String>
+	<s:String x:Key="PriseEnCompte.InterventionImmediate"				>Intervention immédiate</s:String>
+
+	<!-- ComponentState -->
+	<s:String x:Key="ComponentState.A"									>Absent</s:String>
+	<s:String x:Key="ComponentState.S"									>En service</s:String>
+	<s:String x:Key="ComponentState.H"									>Hors service</s:String>
+	<s:String x:Key="ComponentState.D"									>Dégradé</s:String>
+	<s:String x:Key="ComponentState.Inconnu"							>Inconnu</s:String>
+	<s:String x:Key="ComponentState.I"									>Inexistant</s:String>
+
+	<!-- equipment fault state -->
+	<s:String x:Key="EqpFault"											>Statut de lecture</s:String>
+	<s:String x:Key="EqpFault.Title"									>Erreur</s:String>
+	<s:String x:Key="EqpFault.None"										>OK</s:String>
+	<s:String x:Key="EqpFault.Timeout"									>Timeout</s:String>
+	<s:String x:Key="EqpFault.GenericSnmp"								>Erreur de communication</s:String>
+	<s:String x:Key="EqpFault.DiscoverFault"							>Erreur de découverte de l'équipement sur le réseau</s:String>
+	<s:String x:Key="EqpFault.GetSetFault"								>Erreur de lecture/écriture</s:String>
+	<s:String x:Key="EqpFault.DataFault"								>Erreur dans l'intégrité des données</s:String>
+	<s:String x:Key="EqpFault.UnableToResolve"							>Erreur sur le nom de l'hôte</s:String>
+	<s:String x:Key="EqpFault.UnknownFault"								>Erreur non gérée</s:String>
+	<s:String x:Key="EqpFault.HeartbeatLost"							>Perte du signal de vie</s:String>
+
+	<!-- connection status -->
+	<s:String x:Key="ConnectionStatus.Title"							>Présence</s:String>
+	<s:String x:Key="ConnectionStatus.Connected"						>Connecté</s:String>
+	<s:String x:Key="ConnectionStatus.Disconnected"						>Déconnecté</s:String>
+
+	<!-- connection type -->
+	<s:String x:Key="ConnectionType.Title"								>Raccordé</s:String>
+	<s:String x:Key="ConnectionType.Offline"							>Non</s:String>
+	<s:String x:Key="ConnectionType.PictoOffline"						>Non raccordé</s:String>
+
+	<!-- Remote Status-->
+	<s:String x:Key="RemoteStatus.OK"									>Executée</s:String>
+	<s:String x:Key="RemoteStatus.KO"									>Échouée</s:String>
+	<s:String x:Key="RemoteStatus.Unknown"								>Inconnu</s:String>
+	<s:String x:Key="RemoteStatus.Tooltip.OK"							>Télécommande executée</s:String>
+	<s:String x:Key="RemoteStatus.Tooltip.KO"							>Télécommande échouée</s:String>
+	<s:String x:Key="RemoteStatus.Tooltip.Unknown"						>Résultat inconnu</s:String>
+
+	<!-- Schedule mode-->
+	<s:String x:Key="Schedule.Auto"										>Automatique</s:String>
+	<s:String x:Key="Schedule.Manu"										>Manuelle</s:String>
+	<s:String x:Key="Schedule.ManuWithDetail"							>Manuelle (uniquement 1ère de la journée)</s:String>
+
+	<!-- ###################### ATTRIB ###################### -->
+
+	<s:String x:Key="Attributes.CEB"									>CEB</s:String>
+	<s:String x:Key="Attributes.Kind"									>Type</s:String>
+	<s:String x:Key="Attributes.State"									>État</s:String>
+	<s:String x:Key="Attributes.SerialNumber"							>N° série</s:String>
+	<s:String x:Key="Attributes.CebMaster"								>Maître</s:String>
+	<s:String x:Key="Attributes.MasterUnknow"							>Non défini</s:String>
+	<s:String x:Key="Attributes.Site"									>Site</s:String>
+	<s:String x:Key="Attributes.CodeAlarm"								>Code évènement</s:String>
+	<s:String x:Key="Attributes.Status"									>Statut</s:String>
+	<s:String x:Key="Attributes.Category"								>Catégorie</s:String>
+	<s:String x:Key="Attributes.DateTime"								>Date/Heure</s:String>
+	<s:String x:Key="Attributes.Component"								>Composant</s:String>
+	<s:String x:Key="Attributes.Code"									>Code</s:String>
+	<s:String x:Key="Attributes.Exploitant"								>Exploitant</s:String>
+	<s:String x:Key="Attributes.Map"									>Carte</s:String>
+	<s:String x:Key="Attributes.Vector"									>Vectoriel</s:String>
+	<s:String x:Key="Attributes.Label"									>Libellé</s:String>
+	<s:String x:Key="Attributes.Properties"								>Propriétés</s:String>
+	<s:String x:Key="Attributes.Line"									>Ligne</s:String>
+	<s:String x:Key="Attributes.Height"									>Hauteur</s:String>
+	<s:String x:Key="Attributes.Width"									>Largeur</s:String>
+
+	<!--a supprimer NJT-->
+	<s:String x:Key="Attributes.ParamVersion"							>Paramètres</s:String>
+	<s:String x:Key="Attributes.SoftVersion"							>Logiciel</s:String>
+	<s:String x:Key="Attributes.BusLine"								>Ligne</s:String>
+	<s:String x:Key="Attributes.Configuration"							>Configuration</s:String>
+	<s:String x:Key="Attributes.EmergencyMode"							>Mode urgence</s:String>
+	<s:String x:Key="Attributes.Agent"									>Agent</s:String>
+	<s:String x:Key="Attributes.User"									>Utilisateur</s:String>
+	<s:String x:Key="Attributes.IsOnline"								>Online</s:String>
+	<s:String x:Key="Attributes.Description"							>Description</s:String>
+	<s:String x:Key="Attributes.IsNotifiable"							>Notifiable</s:String>
+
+	<!-- ###################### CONTROLS ###################### -->
+
+	<!-- Special-->
+	<s:String x:Key="GroupBy.Variable"									>variable</s:String>
+	<s:String x:Key="GroupBy.Variables"									>variables</s:String>
+
+	<!-- ToogleSwitch-->
+	<s:String x:Key="ToggleSwitch.NullLabel"							>N.A.</s:String>
+	<s:String x:Key="ToggleSwitch.OnLabel"								>Oui</s:String>
+	<s:String x:Key="ToggleSwitch.OffLabel"								>Non</s:String>
+
+	<s:String x:Key="ToggleSwitch.SelectAll"							>Tous</s:String>
+	<s:String x:Key="ToggleSwitch.SelectNone"							>Aucun</s:String>
+	<s:String x:Key="ToggleSwitch.Select.Tootip"						>Changer l'état de sélection de tous les éléments du groupe</s:String>
+	
+	<!-- Filter -->
+	<s:String x:Key="GridFilter.All"									>(Sélectionner tout)</s:String>
+	<s:String x:Key="GridFilter.Equals"									>Égal à</s:String>
+	<s:String x:Key="GridFilter.NotEquals"								>Non égal</s:String>
+	<s:String x:Key="GridFilter.GreaterThan"							>Supérieur à</s:String>
+	<s:String x:Key="GridFilter.GreaterThanEqual"						>Supérieur ou égal</s:String>
+	<s:String x:Key="GridFilter.LessThan"								>Inférieur à</s:String>
+	<s:String x:Key="GridFilter.LessThanEqual"							>Inférieur ou égal</s:String>
+	<s:String x:Key="GridFilter.Contains"								>Contient</s:String>
+	<s:String x:Key="GridFilter.StartsWith"								>Commence par</s:String>
+	<s:String x:Key="GridFilter.EndsWith"								>Se termine par</s:String>
+
+	<!-- DisplayMode-->
+	<s:String x:Key="DisplayMode.Title"									>Affichage</s:String>
+	<s:String x:Key="DisplayMode.Map"									>Carte</s:String>
+	<s:String x:Key="DisplayMode.Plan"									>Plan</s:String>
+	<s:String x:Key="DisplayMode.Platform"								>Quai</s:String>
+	<s:String x:Key="DisplayMode.Picto"									>Pictogramme</s:String>
+	<s:String x:Key="DisplayMode.Grid"									>Grille</s:String>
+	<s:String x:Key="DisplayMode.Line"									>Ligne</s:String>
+	<s:String x:Key="DisplayMode.None"									>Aucun</s:String>
+	<s:String x:Key="DisplayMode.All"									>Tous</s:String>
+	<s:String x:Key="DisplayMode.Current"								>Courant</s:String>
+	<s:String x:Key="DisplayMode.History"								>Historique</s:String>
+
+	<!-- Watermarks-->
+	<s:String x:Key="Watermark.ComboSelectEdit"							>Sélectionner pour édition...</s:String>
+	<s:String x:Key="Watermark.QuickFilter"								>Filtre rapide...</s:String>
+
+	<!-- ###################### VIEWS ###################### -->
+
+	<!-- HomeView -->
+	<s:String x:Key="HomeView.Dashboard"								>Tableau de bord</s:String>
+	<s:String x:Key="HomeView.Topology"									>Topologie</s:String>
+	<s:String x:Key="HomeView.Station"									>Sites</s:String>
+	<s:String x:Key="HomeView.Equipements"								>Équipements</s:String>
+	<s:String x:Key="HomeView.Details"									>Détails</s:String>
+	<s:String x:Key="HomeView.Schedule"									>Programmations</s:String>
+	<s:String x:Key="HomeView.Events"									>Évènements</s:String>
+	<s:String x:Key="HomeView.Admin"									>Administration</s:String>
+	<s:String x:Key="HomeView.Exit"										>Se déconnecter</s:String>
+	<s:String x:Key="HomeView.Help"										>Aide...</s:String>
+
+	<!-- Dashboard -->
+
+	<!-- Event-->
+
+	
+	<!-- Topo-->
+
+
+	<!-- Station -->
+	<s:String x:Key="StationView.NoSchedule"							>Aucune active</s:String>
+	<s:String x:Key="StationView.ScheduleTitle"							>{0} - {1}</s:String>
+	<s:String x:Key="StationView.SelectMapWatermark"					>Sélectionner un plan...</s:String>
+
+	<!-- ScheduleView-->
+	<s:String x:Key="ScheduleView.ForSite"								>Pour le site</s:String>
+	<s:String x:Key="ScheduleView.StartTime"							>Début</s:String>
+	<s:String x:Key="ScheduleView.Counter"								>Nb CEB</s:String>
+	<s:String x:Key="ScheduleView.Cebs"									>Liste des CEB</s:String>
+	<s:String x:Key="ScheduleView.Cebs.Watermark"						>Télécommande pour cet équipement</s:String>
+	<s:String x:Key="ScheduleView.Applied"								>En cours</s:String>
+	<s:String x:Key="ScheduleView.Apply"								>Appliquer...</s:String>
+	<s:String x:Key="ScheduleView.ApplyBtn"								>Appliquer cette programmation</s:String>
+	<s:String x:Key="ScheduleView.D1"									>Lundi;</s:String>
+	<s:String x:Key="ScheduleView.D2"									>Mardi;</s:String>
+	<s:String x:Key="ScheduleView.D3"									>Mercredi;</s:String>
+	<s:String x:Key="ScheduleView.D4"									>Jeudi;</s:String>
+	<s:String x:Key="ScheduleView.D5"									>Vendredi;</s:String>
+	<s:String x:Key="ScheduleView.D6"									>Samedi;</s:String>
+	<s:String x:Key="ScheduleView.D7"									>Dimanche;</s:String>
+	<!-- Editor -->
+	<s:String x:Key="ScheduleView.Filter"								>Filtrer les équipements</s:String>
+	<s:String x:Key="ScheduleView.None"									>Aucune</s:String>
+	<s:String x:Key="ScheduleView.All"									>Tous</s:String>
+	<s:String x:Key="ScheduleView.Mode"									>Mode de programmation</s:String>
+	<s:String x:Key="ScheduleView.List"									>Liste de programmation</s:String>
+
+	<!-- devices -->
+	<s:String x:Key="Picto.Tooltip.CebNus"								>CEB et Numéro de série</s:String>
+
+	<!-- content -->
+
+	<!-- Flyout -->
+	<s:String x:Key="Flyout.NumberUser"									>utilisateur(s) connecté(s)</s:String>
+
+	<!-- Flyouts / Recherche -->
+	<s:String x:Key="Search.Title"										>Rechercher</s:String>
+	<s:String x:Key="Search.NoResults"									>Pas de résultats</s:String>
+	<s:String x:Key="Search.Watermark"									>Tapez le texte à rechercher ici...</s:String>
+	<s:String x:Key="Search.CebSiteWatermark"							>Recherchez un CEB ou un site ici</s:String>
+
+	<!-- Flyouts / Remote -->
+	<s:String x:Key="Remote.Title"										>Télécommandes</s:String>
+	<s:String x:Key="Remote.NoCommand"									>Aucune commande disponible...</s:String>
+	<s:String x:Key="Remote.SucceededOn"								>réussi sur</s:String>
+
+	<!-- Flyouts / AppBar -->
+	<s:String x:Key="RunningCommandView.Button.Supprimer"				>Supprimer</s:String>
+	<s:String x:Key="RunningCommandView.Button.Valider"					>OK</s:String>
+	<s:String x:Key="RunningCommandView.Status.Attente"					>En attente</s:String>
+	<s:String x:Key="RunningCommandView.Status.Encour"					>En cours de traitement</s:String>
+	<s:String x:Key="RunningCommandView.Status.Execute"					>Exécutée avec succés</s:String>
+	<s:String x:Key="RunningCommandView.Status.Error"					>Erreur</s:String>
+	<s:String x:Key="RunningCommandView.Status.Acknowledged"			>Acquittée, en attente d'un code retour</s:String>
+	<s:String x:Key="RunningCommandView.Status.DiscoverTimeout"			>L'équipement n'a pas répondu dans le temps imparti</s:String>
+	<s:String x:Key="RunningCommandView.Status.DiscoverError"			>Erreur lors de l'authentification avec l'équipement</s:String>
+	<s:String x:Key="RunningCommandView.Status.SnmpError"				>Erreur Snmp lors de l'échange avec l'équipement</s:String>
+	<s:String x:Key="RunningCommandView.Status.AckTimeout"				>Télécommande non acquittée</s:String>
+	<s:String x:Key="RunningCommandView.Status.RemoteTaskReturnError"	>La télécommande s'est terminée en erreur</s:String>
+	<s:String x:Key="RunningCommandView.Status.RemoteTaskTimeout"		>La télécommande ne s'est jamais terminée</s:String>
+	<s:String x:Key="RunningCommandView.Status.OtherError"				>Une erreur s'est produite</s:String>
+
+
+	<!-- LoginView-->
+	<s:String x:Key="LoginView.System"									>ATLAS</s:String>
+	<s:String x:Key="LoginView.Copyright"								>®</s:String>
+	<s:String x:Key="LoginView.Title"									>Supervision</s:String>
+	<s:String x:Key="LoginView.AuthenticationRequired"					>Authentification requise</s:String>
+	<s:String x:Key="LoginView.Identifier"								>Identifiant</s:String>
+	<s:String x:Key="LoginView.Password"								>Mot de passe</s:String>
+	<s:String x:Key="LoginView.BtnOK"									>OK</s:String>
+	<s:String x:Key="LoginView.Error"									>Erreur d'authentification</s:String>
+	<s:String x:Key="LoginView.ShowCopyright"							>true</s:String>
+
+	<s:String x:Key="LoginView.MdpExpired"								>(Expiré !!!)</s:String>
+	<s:String x:Key="LoginView.LoginInvalid"							>Identifiant ou mot de passe invalide</s:String>
+	<s:String x:Key="LoginView.LoginLocked"								>Compte temporairement verrouillé</s:String>
+	<s:String x:Key="LoginView.LoginExpiredSoon"						>Compte utilisateur bientôt expiré : Veuillez changer le mot de passe</s:String>
+	<s:String x:Key="LoginView.LoginExpired"							>Compte utilisateur expiré : Veuillez contacter votre administrateur billettique</s:String>
+	<s:String x:Key="LoginView.LoginNonExploitant"						>Compte utilisateur non exploitant</s:String>
+	<s:String x:Key="LoginView.LoginSansProfil"							>Compte utilisateur sans profil</s:String>
+	<s:String x:Key="LoginView.LoginAPI"								>Erreur de connexion API/BDD</s:String>
+
+	<!-- Topic -->
+	<s:String x:Key="Topic.Event.Title"									>Évènements</s:String>
+
+	<s:String x:Key="Topic.ColHeaderLabel"								>Libellé</s:String>
+	<s:String x:Key="Topic.ColHeaderValue"								>Valeur</s:String>
+	<s:String x:Key="Topic.ColHeaderActive"								>Actif/Inactif</s:String>
+	<s:String x:Key="Topic.ColHeaderUpdate"								>Mise à jour</s:String>
+	<s:String x:Key="Topic.ColHeaderState"								>État</s:String>
+	<s:String x:Key="Topic.ColHeaderEventCode"							>Code</s:String>
+	<s:String x:Key="Topic.ColHeaderComponentCode"						>Composant</s:String>
+
+	<s:String x:Key="Topic.AppareanceDateTime"							>Apparition</s:String>
+	<s:String x:Key="Topic.EquipmentUpdateDateTime"						>Dernières données équipement reçues le</s:String>
+	<s:String x:Key="Topic.LoadDataTopics"								>Chargement en cours...</s:String>
+	<s:String x:Key="Topic.NoDataTopics"								>Pas de données disponibles pour cette rubrique.</s:String>
+
+	<s:String x:Key="Topic.Absences.Title"								>Absences</s:String>
+	<s:String x:Key="Topic.Duree"										>Durée</s:String>
+	<s:String x:Key="Topic.Start"										>Début</s:String>
+	<s:String x:Key="Topic.End"											>Fin</s:String>
+	<s:String x:Key="Topic.Month"										>Mois</s:String>
+	<s:String x:Key="Topic.Day"											>J</s:String>
+	<s:String x:Key="Topic.DayComplete"									>Jour(s)</s:String>
+	<s:String x:Key="Topic.Hour"										>H</s:String>
+	<s:String x:Key="Topic.HourComplete"								>Heure(s)</s:String>
+	<s:String x:Key="Topic.Minute"										>M</s:String>
+	<s:String x:Key="Topic.MinuteComplete"								>Minute(s)</s:String>
+	<s:String x:Key="Topic.Second"										>S</s:String>
+	<s:String x:Key="Topic.SecondComplete"								>Seconde(s)</s:String>
+	<s:String x:Key="Topic.TotalMinute"									>Durée en minutes</s:String>
+	<s:String x:Key="Topic.IsNotifiable"								>Évènement notifiable par l'équipement</s:String>
+	<s:String x:Key="Topic.Unblacklist"									>Retirer de la liste noire</s:String>
+	<s:String x:Key="Topic.Blacklisted"									>Sur la liste noire</s:String>
+	<s:String x:Key="Topic.Inactive"									>Inactif</s:String>
+
+	<!-- ContentView -->
+	<s:String x:Key="ContentView.Event"									>Évènement(s)</s:String>
+	<s:String x:Key="ContentView.Content"								>Contenu</s:String>
+	<s:String x:Key="ContentView.Array"									>Module(s)</s:String>
+	<s:String x:Key="ContentView.Comment"								>Commentaire(s)</s:String>
+	<s:String x:Key="ContentView.Absence"								>Absence(s)</s:String>
+	<s:String x:Key="ContentView.Audit"									>Audit</s:String>
+	<s:String x:Key="ContentView.Synchro"								>Synchroniser</s:String>
+	<s:String x:Key="ContentView.Synchro.Tooltip"						>Demander une lecture et resynchroniser en cas de décalage</s:String>
+	<s:String x:Key="ContentView.Unblack"								>Liste noire</s:String>
+	<s:String x:Key="ContentView.Unblack.Tooltip"						>Demander le déblocage</s:String>
+
+	<!-- ContentView / Audit-->
+	<s:String x:Key="ContentView.KindOfLog"								>Log type</s:String>
+	<s:String x:Key="ContentView.AuditMessage"							>Audit log</s:String>
+	<s:String x:Key="ContentView.AuditComment"							>Action à prendre</s:String>
+
+	<!-- ContentView -->
+	<s:String x:Key="TopicComments.AddEdit"								>Ajouter ou modifier un commentaire</s:String>
+	<s:String x:Key="TopicComments.Title"								>Commentaires déclaratifs</s:String>
+	<s:String x:Key="TopicComments.DTHRCreation"						>Date de création</s:String>
+	<s:String x:Key="TopicComments.Label"								>Intitulé</s:String>
+	<s:String x:Key="TopicComments.Comments"							>Commentaires</s:String>
+	<s:String x:Key="TopicComments.Closed"								>Date de fermeture</s:String>
+	<s:String x:Key="TopicComments.Actions"								>Clore</s:String>
+
+	<!-- ###################### COMMANDS ###################### -->
+
+	<s:String x:Key="Commands.Save"										>Sauvegarder</s:String>
+	<s:String x:Key="Commands.Refresh"									>Rafraichir</s:String>
+	<s:String x:Key="Commands.Add"										>Ajouter</s:String>
+	<s:String x:Key="Commands.New"										>Nouveau</s:String>
+	<s:String x:Key="Commands.OpenFile"									>Ouvrir fichier</s:String>
+	<s:String x:Key="Commands.OpenFolder"								>Répertoire</s:String>
+	<s:String x:Key="Commands.Import"									>Importer</s:String>
+	<s:String x:Key="Commands.Exit"										>Quitter</s:String>
+	<s:String x:Key="Commands.Start"									>Démarrer</s:String>
+	<s:String x:Key="Commands.Stop"										>Stopper</s:String>
+	<s:String x:Key="Commands.Delete"									>Supprimer</s:String>
+	<s:String x:Key="Commands.Modify"									>Modifier</s:String>
+	<s:String x:Key="Commands.Reset"									>Réinitialiser</s:String>
+	<s:String x:Key="Commands.Upload"									>Télécharger</s:String>
+	<s:String x:Key="Commands.Undo"										>Annuler</s:String>
+	<s:String x:Key="Commands.Redo"										>Rétablir</s:String>
+	<s:String x:Key="Commands.SelectAll"								>Sélectionner</s:String>
+	<s:String x:Key="Commands.SelectElements"							>Sélectionner</s:String>
+	<s:String x:Key="Commands.ImportMib"								>Importer MIB</s:String>
+	<s:String x:Key="Commands.Select"									>Sélectionner...</s:String>
+
+	<s:String x:Key="Commands.Top"										>en haut</s:String>
+	<s:String x:Key="Commands.Bottom"									>en bas</s:String>
+	<s:String x:Key="Commands.Left"										>à gauche</s:String>
+	<s:String x:Key="Commands.Right"									>à droite</s:String>
+
+	<s:String x:Key="Commands.VerticalCenters"							>les centres verticalement</s:String>
+	<s:String x:Key="Commands.HorizontalCenters"						>les centres horizontalement</s:String>
+
+	<s:String x:Key="Commands.Horizontal"								>Horizontalement</s:String>
+	<s:String x:Key="Commands.Vertical"									>Verticalement</s:String>
+
+	<s:String x:Key="Commands.Forward"									>Vers l'avant</s:String>
+	<s:String x:Key="Commands.Front"									>Mettre au premier plan</s:String>
+	<s:String x:Key="Commands.Backward"									>Vers l'arrière</s:String>
+	<s:String x:Key="Commands.Back"										>Mettre en arrière plan</s:String>
+
+	<!-- ###################### EDITOR ###################### -->
+
+	<!-- Admin -->
+	<s:String x:Key="AdminView.Title"									>Administration</s:String>
+	<s:String x:Key="AdminView.SettingsView"							>Paramètres</s:String>
+	<s:String x:Key="AdminView.NotificationView"						>Notifications</s:String>
+	<s:String x:Key="AdminView.ProfileView"								>Profils</s:String>
+	<s:String x:Key="AdminView.TypeEqpView"								>Types d'équipement</s:String>
+	<s:String x:Key="AdminView.LineView"								>Lignes</s:String>
+	<s:String x:Key="AdminView.EquipmentView"							>Équipements</s:String>
+	<s:String x:Key="AdminView.MapView"									>Cartes</s:String>
+	<s:String x:Key="AdminView.EditMapView"								>Édition de carte</s:String>
+	<s:String x:Key="AdminView.StationPlanView"							>Plans</s:String>
+	<s:String x:Key="AdminView.EditStationMapView"						>Édition de plan</s:String>
+
+	<!-- NotificationView -->
+	<s:String x:Key="NotificationView.AssoEvent"						>évènements associés</s:String>
+	<s:String x:Key="NotificationView.AssoMail"							>Emails associés</s:String>
+	<s:String x:Key="NotificationView.SendTo"							>Envoyer à</s:String>
+	<s:String x:Key="NotificationView.Mail"								>Mail</s:String>
+	
+	<!-- SettingsView -->
+	<s:String x:Key="SettingsView.Languages.Title"						>Cultures</s:String>
+	<s:String x:Key="SettingsView.CultureIsDefault"						>Par défaut</s:String>
+	<s:String x:Key="SettingsView.CultureIsDisplayed"					>Afficher dans les IHM</s:String>
+	
+	<s:String x:Key="SettingsView.Display.Title"						>Afficher</s:String>
+	<s:String x:Key="SettingsView.CheckSitePlan"						>Les plans de site</s:String>
+	<s:String x:Key="SettingsView.CheckLines"							>Les lignes</s:String>
+	<s:String x:Key="SettingsView.CheckComments"						>Les commentaires équipements</s:String>
+
+	<s:String x:Key="SettingsView.RibbonGoToFirst"						>Sélectionner automatiquement la dernière alarme qui s'affiche dans la grille des évènements en cours</s:String>
+	<s:String x:Key="SettingsView.EnableIpDiscovery"					>Activer la découverte d'adresse IP à la réception d'un trap pour l'utiliser en cas d'erreur DNS</s:String>
+	<s:String x:Key="SettingsView.EnableBlackList"						>Activer le mécanisme de mise sur la liste noire en cas de comportement anormal de l'équipement</s:String>
+
+	<s:String x:Key="SettingsView.Functions.Title"						>Activer</s:String>
+	<s:String x:Key="SettingsView.AutoShut"								>Délai pour la fermeture de session, zéro=infini (min.)</s:String>
+	<s:String x:Key="SettingsView.AutoShut.Watermark"					>Délai en minutes avant déconnexion automatique</s:String>
+	
+	<s:String x:Key="SettingsView.CheckSchedule"						>Les programmations</s:String>
+	<s:String x:Key="SettingsView.CheckOffline"							>Les activités du mode hors ligne (non raccordé)</s:String>
+	<s:String x:Key="SettingsView.CheckCR999"							>L'évènement de connexion/déconnexion CR999</s:String>
+	<s:String x:Key="SettingsView.CheckMails"							>La création et l'envoi de mails</s:String>
+	<s:String x:Key="SettingsView.CheckUserAutoProfil"					>L'affectation automatique des utilisateurs sur les profils</s:String>
+
+	<s:String x:Key="SettingsView.Prise.Watermark"						>Sélectionner le niveau de prise en compte</s:String>
+	
+	<s:String x:Key="SettingsView.Pooling.Title"						>Pooling et cache</s:String>
+	<s:String x:Key="SettingsView.DBPooling"							>Période de pooling de la base de données (ms.)</s:String>
+	<s:String x:Key="SettingsView.DBPooling.Watermark"					>Intervale de scan de la base de donnée</s:String>
+	
+	<s:String x:Key="SettingsView.VarCache"								>Période de cache des variables équipements (min.)</s:String>
+	<s:String x:Key="SettingsView.VarCache.Watermark"					>Durée du cache avant relecture réelle</s:String>
+	
+	<s:String x:Key="SettingsView.Classif.Title"						>Classification et prise en compte associées</s:String>
+
+	<s:String x:Key="SettingsView.ComEquipement"						>Communication équipement</s:String>
+	<s:String x:Key="SettingsView.AliveTolerance"						>Tolérance de perte du bit de vie</s:String>
+	<s:String x:Key="SettingsView.AliveTolerance.Watermark"				>Nombre de bit de vie perdu avant déconnexion</s:String>
+	<s:String x:Key="SettingsView.RegisterMissingPeriod"				>Enregistrement des périodes d'absence (décocher effacera l'historique)</s:String>
+	
+	<s:String x:Key="SettingsView.IpDiscovery"							>Activer la découverte de l'adresse IP en cas de problème</s:String>
+	<s:String x:Key="SettingsView.IpDiscovery.Tooltip"					>Activer la découverte de l'adresse IP en cas de problème de comunication via le hostname</s:String>
+	
+	<s:String x:Key="SettingsView.Hotlist"								>Activer la mise en hostlist</s:String>
+	<s:String x:Key="SettingsView.Hotlist.Tooltip"						>Activer la mise en hostlist d'un équipement dont la communication pose problème (Nb de traps, Non réponse, etc.)</s:String>
+	
+	<s:String x:Key="SettingsView.Smtp.Title"							>Smtp / Serveur de mails</s:String>
+	<s:String x:Key="SettingsView.MailHost"								>Nom DNS du serveur</s:String>
+	<s:String x:Key="SettingsView.MailHost.Watermark"					>Nom d'hôte du serveur SMTP</s:String>
+
+	<s:String x:Key="SettingsView.MailPort"								>Port</s:String>
+	<s:String x:Key="SettingsView.MailPort.Watermark"					>Port</s:String>
+	
+	<s:String x:Key="SettingsView.MailSSL"								>Activer SSL</s:String>
+	<s:String x:Key="SettingsView.MailUser"								>Utilisateur (si vide, pas d'authentification)</s:String>
+	<s:String x:Key="SettingsView.MailUser.Watermark"					>Utilisateur (si vide, pas d'authentification)</s:String>
+
+	<s:String x:Key="SettingsView.MailPassword"							>Mot de passe</s:String>
+	<s:String x:Key="SettingsView.MailPassword.Watermark"				>Mot de passe</s:String>
+	
+	<s:String x:Key="SettingsView.MailFrom"								>À partir de (from)</s:String>
+	<s:String x:Key="SettingsView.MailFrom.Watermark"					>À partir de (from)</s:String>
+
+	<s:String x:Key="SettingsView.MailCC"								>Copie conforme (Cc)</s:String>
+	<s:String x:Key="SettingsView.MailCC.Watermark"						>Copie conforme (Cc)</s:String>
+
+	<s:String x:Key="SettingsView.MailBufferTime"						>Temporisation avant envoi (min.)</s:String>
+	<s:String x:Key="SettingsView.MailBufferTime.Watermark"				>Temporisation avant envoi (min.)</s:String>
+
+	<s:String x:Key="SettingsView.Mail999Tempo"							>Temporisation des mails CR999 (min.)</s:String>
+	<s:String x:Key="SettingsView.Mail999Tempo.Watermark"				>Temporisation des mails CR999 (min.)</s:String>
+
+	<s:String x:Key="SettingsView.Template.Title"						>Modèle des mails</s:String>
+	<s:String x:Key="SettingsView.MailModel"							>Le modèle contient les tags suivants : @Ceb, @Site, @Label, @CodeComposant, @CodeEvenement, @Classification, @PriseEnCompte, @Status, @ReceptionDateTime</s:String>
+	<s:String x:Key="SettingsView.MailTemplateTtile"					>Titre du mail (texte simple sur une seule ligne)</s:String>
+	<s:String x:Key="SettingsView.MailTemplateTtile.Watermark"			>Titre du mail envoyé sur les évènements (Texte)</s:String>
+
+	<s:String x:Key="SettingsView.MailTemplateBody"						>Corps du mail (html)</s:String>
+	<s:String x:Key="SettingsView.MailTemplateBody.Watermark"			>Modèle du mail envoyé sur les évènements (html)</s:String>
+
+	<!-- MapView -->
+	<s:String x:Key="MapView.HautGauche"								>Coin supérieur gauche</s:String>
+	<s:String x:Key="MapView.BasDroit"									>Coin inférieur droit</s:String>
+
+	<s:String x:Key="MapView.CurrentMap"								>Édition de carte</s:String>
+	<s:String x:Key="MapView.ListElem"									>Liste des éléments positionnés</s:String>
+
+	<s:String x:Key="MapView.Grid.Scale"								>Échelle</s:String>
+	<s:String x:Key="MapView.Grid.Scale.Watermark"						>Changer la taille</s:String>
+	
+	<s:String x:Key="MapView.Grid.Angle"								>Angle</s:String>
+	<s:String x:Key="MapView.Grid.Angle.Watermark"						>Angle de rotation</s:String>
+	
+	<s:String x:Key="MapView.Grid.Flip"									>Retourné</s:String>
+	<s:String x:Key="MapView.Grid.Longitude"							>Longitude (X)</s:String>
+	<s:String x:Key="MapView.Grid.Longitude.Watermark"					>Coordonnée en X</s:String>
+	
+	<s:String x:Key="MapView.Grid.Latitude"								>Latitude (Y)</s:String>
+	<s:String x:Key="MapView.Grid.Latitude.Watermark"					>Coordonnée en Y</s:String>
+	
+	<s:String x:Key="MapView.Grid.ZIndex"								>ZIndex</s:String>
+	<s:String x:Key="MapView.Grid.ZIndex.Watermark"						>Coordonnée en Z</s:String>
+	
+	<!-- EquipmentView -->
+	<s:String x:Key="EquipmentView.Hostname"							>Nom d'hôte</s:String>
+	<s:String x:Key="EquipmentView.OidRang"								>Rang Oid</s:String>
+	<s:String x:Key="EquipmentView.CheckEnvoiMail"						>Envoi de mail</s:String>
+	<s:String x:Key="EquipmentView.CheckActif"							>Actif</s:String>
+	<s:String x:Key="EquipmentView.CheckDeleted"						>Supprimé</s:String>
+	
+	<!-- TypeEqpView view-->
+	<s:String x:Key="TypeEqpView.Picto"									>Icône de liste</s:String>
+	<s:String x:Key="TypeEqpView.PictoForMap"							>Icône de carte</s:String>
+	<s:String x:Key="TypeEqpView.MibVersion"							>Version de MIB</s:String>
+	<s:String x:Key="TypeEqpView.MibDate"								>Date d'import</s:String>
+	<s:String x:Key="TypeEqpView.VieSansNTR"							>Vie sans NTR</s:String>
+
+	<!-- DefaultComToolTip -->
+	<s:String x:Key="DefaultComToolTip.Title"							>Synthèse de l'état de communication</s:String>
+	<s:String x:Key="DefaultComToolTip.EquToSSUP"						>Équipement vers SSUP</s:String>
+	<s:String x:Key="DefaultComToolTip.SSUPToEqu"						>SSUP vers équipement</s:String>
+	<s:String x:Key="DefaultComToolTip.IsAliveOk"						>La réception des traps de vie, des états et des événements est fonctionnelle.</s:String>
+	<s:String x:Key="DefaultComToolTip.IsAliveKO"						>La réception des traps de vie, des états et des événements n'est pas fonctionnelle. Les informations de l'équipement ne sont pas représentatives du terrain.</s:String>
+	<s:String x:Key="DefaultComToolTip.HasDefaultOK"					>Les télécommandes, la lecture ou la récupération des traps perdus, n'ont pas rencontré d'erreur.</s:String>
+	<s:String x:Key="DefaultComToolTip.HasDefaultKO"					>Les télécommandes, la lecture ou la récupération des traps perdus, ont rencontré une erreur. Consultez l'audit de cet équipement pour résoudre le problème.</s:String>
+
+	<!-- AlarmHistoryView -->
+	<s:String x:Key="AlarmHistoryView.Unknown">Inconnu</s:String>
+	<s:String x:Key="AlarmHistoryView.OK">OK</s:String>
+	<s:String x:Key="AlarmHistoryView.KO">KO</s:String>
+
+</ResourceDictionary>

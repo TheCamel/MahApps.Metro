@@ -26,6 +26,7 @@ using NHotkey.Wpf;
 using System.Collections.ObjectModel;
 using System.Windows.Data;
 using ControlzEx.Theming;
+using SSUP.Components.Managers;
 
 namespace MetroDemo
 {
@@ -195,7 +196,7 @@ namespace MetroDemo
                 x => PerformDialogCoordinatorAction(this.ShowMessage(x!), x == "DISPATCHER_THREAD")
             );
 
-            this.ShowProgressDialogCommand = new SimpleCommand<object>(o => true, x => this.RunProgressFromVm());
+            this.ShowProgressDialogCommand = new SimpleCommand<object>(o => true, x => StringManager.Instance.SetCulture("fr-FR"));// this.RunProgressFromVm());
 
             this.ShowCustomDialogCommand = new SimpleCommand<object>(o => true, x => this.RunCustomFromVm());
 

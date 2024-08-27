@@ -15,16 +15,8 @@
         <ResourceDictionary>
 
             <!--  This is the template for all menu items. In this sample we use the glyph items.  -->
-            <DataTemplate x:Key="HamburgerMenuItem" DataType="{x:Type mah:HamburgerMenuGlyphItem}">
+            <DataTemplate DataType="{x:Type mah:HamburgerMenuIconItem}">
                 <DockPanel Height="48" LastChildFill="True">
-                    <Grid x:Name="IconPart"
-                          Width="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=CompactPaneLength}"
-                          DockPanel.Dock="Left">
-                        <Image Margin="12"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
-                               Source="{Binding Glyph}" />
-                    </Grid>
                     <TextBlock x:Name="TextPart"
                                VerticalAlignment="Center"
                                FontSize="16"
@@ -32,8 +24,6 @@
                 </DockPanel>
                 <DataTemplate.Triggers>
                     <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type mah:HamburgerMenu}}, Path=PanePlacement}" Value="Right">
-                        <Setter TargetName="IconPart" Property="DockPanel.Dock" Value="Right" />
-                        <Setter TargetName="TextPart" Property="Margin" Value="8 0 0 0" />
                     </DataTrigger>
                 </DataTemplate.Triggers>
             </DataTemplate>
@@ -183,8 +173,6 @@
                                HamburgerWidth="48"
                                IsPaneOpen="{Binding IsHamburgerMenuPaneOpen}"
                                ItemInvoked="HamburgerMenuControl_OnItemInvoked"
-                               ItemTemplate="{StaticResource HamburgerMenuItem}"
-                               OptionsItemTemplate="{StaticResource HamburgerOptionsMenuItem}"
                                SelectedIndex="1"
                                VerticalScrollBarOnLeftSide="False">
                 <!--  Header  -->
@@ -200,11 +188,10 @@
                 <!--  Items  -->
                 <mah:HamburgerMenu.ItemsSource>
                     <mah:HamburgerMenuItemCollection>
-                        <mah:HamburgerMenuGlyphItem AutomationProperties.HelpText="First Item shows BigFourSummerHeat"
+                        <mah:HamburgerMenuIconItem AutomationProperties.HelpText="First Item shows BigFourSummerHeat"
                                                     AutomationProperties.Name="First Item"
-                                                    Glyph="/Assets/Photos/BigFourSummerHeat.png"
-                                                    Label="Big four summer heat" />
-                        <mah:HamburgerMenuGlyphItem Glyph="/Assets/Photos/BisonBadlandsChillin.png" Label="Bison badlands Chillin" />
+                                                   Label="{DynamicResource AdminView.LineView}" />
+                        <mah:HamburgerMenuIconItem Label="{DynamicResource AdminView.LineView}" />
                         <mah:HamburgerMenuGlyphItem Glyph="/Assets/Photos/GiantSlabInOregon.png" Label="Giant slab in Oregon" />
                         <mah:HamburgerMenuGlyphItem Glyph="/Assets/Photos/LakeAnnMushroom.png" Label="Lake Ann Mushroom" />
                     </mah:HamburgerMenuItemCollection>

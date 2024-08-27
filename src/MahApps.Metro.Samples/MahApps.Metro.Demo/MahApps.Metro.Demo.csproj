@@ -11,6 +11,10 @@
         <ApplicationIcon>mahapps.metro.logo2.ico</ApplicationIcon>
         <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
+    <ItemGroup>
+      <Page Remove="Resources\XAML\Strings.en-US.xaml" />
+      <Page Remove="Resources\XAML\Strings.fr-FR.xaml" />
+    </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\..\MahApps.Metro\MahApps.Metro.csproj" />
@@ -34,6 +38,11 @@
         <PackageReference Include="MahApps.Metro.IconPacks.Octicons" />
         <PackageReference Include="NHotkey.Wpf" />
         <PackageReference Include="Microsoft.Web.WebView2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Resource Include="Resources\XAML\Languages\Strings.en-US.xaml" />
+      <Resource Include="Resources\XAML\Languages\Strings.fr-FR.xaml" />
     </ItemGroup>
 
     <ItemGroup>
