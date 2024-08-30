@@ -49,4 +49,13 @@
         <Compile DependentUpon="%(Filename)" SubType="Code" Update="**\obj\**\*.g$(DefaultLanguageSourceExtension)" />
         <Compile DependentUpon="%(Filename)" SubType="Designer" Update="**\*.xaml$(DefaultLanguageSourceExtension)" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="ExampleViews\HamburgerExample - Copier.xaml.cs">
+        <DependentUpon>HamburgerExample.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="ExampleViews\HamburgerExample.xaml.cs">
+        <DependentUpon>HamburgerExample.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>

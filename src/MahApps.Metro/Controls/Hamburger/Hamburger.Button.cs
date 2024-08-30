@@ -9,29 +9,29 @@ using System.Windows.Controls;
 namespace MahApps.Metro.Controls
 {
     [StyleTypedProperty(Property = nameof(HamburgerButtonStyle), StyleTargetType = typeof(Button))]
-    public partial class HamburgerMenu
+    public partial class Hamburger
     {
-        /// <summary>Identifies the <see cref="HamburgerWidth"/> dependency property.</summary>
-        public static readonly DependencyProperty HamburgerWidthProperty
-            = DependencyProperty.Register(nameof(HamburgerWidth),
-                                          typeof(double),
-                                          typeof(HamburgerMenu),
-                                          new PropertyMetadata(48.0));
+        ///// <summary>Identifies the <see cref="HamburgerWidth"/> dependency property.</summary>
+        //public static readonly DependencyProperty HamburgerWidthProperty
+        //    = DependencyProperty.Register(nameof(HamburgerWidth),
+        //                                  typeof(double),
+        //                                  typeof(Hamburger),
+        //                                  new PropertyMetadata(48.0));
 
-        /// <summary>
-        /// Gets or sets HamburgerMenu button's <see cref="FrameworkElement.Width"/>.
-        /// </summary>
-        public double HamburgerWidth
-        {
-            get => (double)this.GetValue(HamburgerWidthProperty);
-            set => this.SetValue(HamburgerWidthProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets HamburgerMenu button's <see cref="FrameworkElement.Width"/>.
+        ///// </summary>
+        //public double HamburgerWidth
+        //{
+        //    get => (double)this.GetValue(HamburgerWidthProperty);
+        //    set => this.SetValue(HamburgerWidthProperty, value);
+        //}
 
         /// <summary>Identifies the <see cref="HamburgerHeight"/> dependency property.</summary>
         public static readonly DependencyProperty HamburgerHeightProperty
             = DependencyProperty.Register(nameof(HamburgerHeight),
                                           typeof(double),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(48.0));
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerMarginProperty
             = DependencyProperty.Register(nameof(HamburgerMargin),
                                           typeof(Thickness),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(new Thickness()));
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerVisibilityProperty
             = DependencyProperty.Register(nameof(HamburgerVisibility),
                                           typeof(Visibility),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(Visibility.Visible));
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerButtonStyleProperty
             = DependencyProperty.Register(nameof(HamburgerButtonStyle),
                                           typeof(Style),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerButtonTemplateProperty
             = DependencyProperty.Register(nameof(HamburgerButtonTemplate),
                                           typeof(DataTemplate),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerButtonNameProperty
             = DependencyProperty.Register(nameof(HamburgerButtonName),
                                           typeof(string),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new UIPropertyMetadata(string.Empty),
                                           new ValidateValueCallback(IsNotNull));
 
@@ -128,7 +128,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerButtonHelpTextProperty
             = DependencyProperty.Register(nameof(HamburgerButtonHelpText),
                                           typeof(string),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new UIPropertyMetadata(string.Empty),
                                           new ValidateValueCallback(IsNotNull));
 
@@ -145,7 +145,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty HamburgerMenuHeaderTemplateProperty
             = DependencyProperty.Register(nameof(HamburgerMenuHeaderTemplate),
                                           typeof(DataTemplate),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -160,6 +160,33 @@ namespace MahApps.Metro.Controls
         private static bool IsNotNull(object? value)
         {
             return value != null;
+        }
+
+        /// <summary>Identifies the <see cref="HamburgerButtonClick"/> routed event.</summary>
+        public static readonly RoutedEvent HamburgerButtonClickEvent
+            = EventManager.RegisterRoutedEvent(nameof(HamburgerButtonClick),
+                                               RoutingStrategy.Direct,
+                                               typeof(RoutedEventHandler),
+                                               typeof(Hamburger));
+
+        /// <summary>
+        /// Event raised when the hamburger button is clicked
+        /// </summary>
+        public event RoutedEventHandler HamburgerButtonClick
+        {
+            add => this.AddHandler(HamburgerButtonClickEvent, value);
+            remove => this.RemoveHandler(HamburgerButtonClickEvent, value);
+        }
+
+        private void OnHamburgerButtonClick(object sender, RoutedEventArgs e)
+        {
+            var args = new RoutedEventArgs(HamburgerButtonClickEvent, sender);
+            this.RaiseEvent(args);
+
+            if (!args.Handled)
+            {
+                this.IsPaneOpen = !this.IsPaneOpen;
+            }
         }
     }
 }

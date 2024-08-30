@@ -23,12 +23,20 @@
         <TabControl x:Name="HamburgerTabControl"
                     Margin="10"
                     mah:TabControlHelper.Underlined="TabPanel">
-            <TabItem Header="Default">
+            <TabItem Header="New !!">
+                <exampleViews:HamburgerExample DataContext="{Binding}" />
+            </TabItem>
+
+            <!--<TabItem Header="New creator!!">
+                <exampleViews:HamburgerExampleCreator DataContext="{Binding}" />
+            </TabItem>-->
+            
+            <!--<TabItem Header="Default">
                 <exampleViews:HamburgerMenuDefault DataContext="{Binding}" />
             </TabItem>
             <TabItem Header="Creators Style">
                 <exampleViews:HamburgerMenuCreatorsUpdate DataContext="{Binding}" />
-            </TabItem>
+            </TabItem>-->
         </TabControl>
     </Grid>
 

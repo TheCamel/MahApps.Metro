@@ -10,13 +10,13 @@ using System.Windows.Input;
 namespace MahApps.Metro.Controls
 {
     [StyleTypedProperty(Property = nameof(OptionsItemContainerStyle), StyleTargetType = typeof(ListBoxItem))]
-    public partial class HamburgerMenu
+    public partial class Hamburger
     {
         /// <summary>Identifies the <see cref="OptionsItemsSource"/> dependency property.</summary>
         public static readonly DependencyProperty OptionsItemsSourceProperty
             = DependencyProperty.Register(nameof(OptionsItemsSource),
                                           typeof(object),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -32,7 +32,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsItemContainerStyleProperty
             = DependencyProperty.Register(nameof(OptionsItemContainerStyle),
                                           typeof(Style),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsItemTemplateProperty
             = DependencyProperty.Register(nameof(OptionsItemTemplate),
                                           typeof(DataTemplate),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsItemTemplateSelectorProperty
             = DependencyProperty.Register(nameof(OptionsItemTemplateSelector),
                                           typeof(DataTemplateSelector),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsVisibilityProperty
             = DependencyProperty.Register(nameof(OptionsVisibility),
                                           typeof(Visibility),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(Visibility.Visible));
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty SelectedOptionsItemProperty
             = DependencyProperty.Register(nameof(SelectedOptionsItem),
                                           typeof(object),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty SelectedOptionsIndexProperty
             = DependencyProperty.Register(nameof(SelectedOptionsIndex),
                                           typeof(int),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new FrameworkPropertyMetadata(-1, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal));
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsItemCommandProperty
             = DependencyProperty.Register(nameof(OptionsItemCommand),
                                           typeof(ICommand),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -144,7 +144,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OptionsItemCommandParameterProperty
             = DependencyProperty.Register(nameof(OptionsItemCommandParameter),
                                           typeof(object),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>

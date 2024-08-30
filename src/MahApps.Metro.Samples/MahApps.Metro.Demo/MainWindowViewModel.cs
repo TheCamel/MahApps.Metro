@@ -196,7 +196,8 @@ namespace MetroDemo
                 x => PerformDialogCoordinatorAction(this.ShowMessage(x!), x == "DISPATCHER_THREAD")
             );
 
-            this.ShowProgressDialogCommand = new SimpleCommand<object>(o => true, x => StringManager.Instance.SetCulture("fr-FR"));// this.RunProgressFromVm());
+            this.ShowProgressDialogCommand = new SimpleCommand<object>(o => true, x => toogleCulture());
+            // this.RunProgressFromVm());
 
             this.ShowCustomDialogCommand = new SimpleCommand<object>(o => true, x => this.RunCustomFromVm());
 
@@ -219,7 +220,7 @@ namespace MetroDemo
                 async x => { await this._dialogCoordinator.ShowMessageAsync(this, "Split Button", $"The selected item is '{x}'."); }
             );
 
-            this.ShowHamburgerAboutCommand = ShowAboutCommand.Command;
+ //           this.ShowHamburgerAboutCommand = new SimpleCommand(); // ShowAboutCommand.Command;
 
             this.ToggleSwitchCommand = new SimpleCommand<ToggleSwitch?>(x => x is not null && this.CanUseToggleSwitch,
                                                                         async x => { await this._dialogCoordinator.ShowMessageAsync(this, "ToggleSwitch", $"The ToggleSwitch is now {x!.IsOn}."); });
@@ -237,13 +238,20 @@ namespace MetroDemo
             this.MyObjectParser = new ObjectParser(this, this._dialogCoordinator);
         }
 
+        private void toogleCulture()
+        {
+            if (StringManager.Instance.CurrentCode == "fr-FR")
+                StringManager.Instance.SetCulture("en-US");
+            else StringManager.Instance.SetCulture("fr-FR");
+        }
+
         public ICommand ArtistsDropDownCommand { get; }
 
         public ICommand GenreDropDownMenuItemCommand { get; }
 
         public ICommand GenreSplitButtonItemCommand { get; }
 
-        public ICommand ShowHamburgerAboutCommand { get; }
+     //   public ICommand ShowHamburgerAboutCommand { get; }
 
         public ICommand OpenFlyoutCommand { get; }
 
@@ -371,13 +379,13 @@ namespace MetroDemo
 
         public ICommand CloseCmd { get; }
 
-        private bool canShowHamburgerAboutCommand = true;
+        //private bool canShowHamburgerAboutCommand = true;
 
-        public bool CanShowHamburgerAboutCommand
-        {
-            get => this.canShowHamburgerAboutCommand;
-            set => this.Set(ref this.canShowHamburgerAboutCommand, value);
-        }
+        //public bool CanShowHamburgerAboutCommand
+        //{
+        //    get => this.canShowHamburgerAboutCommand;
+        //    set => this.Set(ref this.canShowHamburgerAboutCommand, value);
+        //}
 
         private bool isHamburgerMenuPaneOpen;
 
@@ -596,5 +604,8 @@ namespace MetroDemo
         }
 
         public ObjectParser? MyObjectParser { get; }
+
+
+        public double CompactPaneLength { get; set; } = 48;
     }
 }

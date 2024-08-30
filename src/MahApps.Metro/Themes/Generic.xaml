@@ -31,7 +31,7 @@
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/RevealImage.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/SplitButton.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/SplitView.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/HamburgerMenu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/Hamburger.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/Tile.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/ToggleSwitch.xaml" />
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Themes/TransitioningContentControl.xaml" />
@@ -63,8 +63,8 @@
     <Style BasedOn="{StaticResource MahApps.Styles.WindowCommandsItem}" TargetType="{x:Type mah:WindowCommandsItem}" />
     <Style BasedOn="{StaticResource MahApps.Styles.WindowCommands}" TargetType="{x:Type mah:WindowCommands}" />
     <Style BasedOn="{StaticResource MahApps.Styles.WindowButtonCommands.Win10}" TargetType="{x:Type mah:WindowButtonCommands}" />
-    <Style BasedOn="{StaticResource MahApps.Styles.HamburgerMenuListBox}" TargetType="{x:Type mah:HamburgerMenuListBox}" />
-    <Style BasedOn="{StaticResource MahApps.Styles.HamburgerMenu}" TargetType="{x:Type mah:HamburgerMenu}" />
+    <Style BasedOn="{StaticResource MahApps.Styles.Hamburger}"
+           TargetType="{x:Type mah:Hamburger}" />
     <Style BasedOn="{StaticResource MahApps.Styles.MetroHeader}" TargetType="{x:Type mah:MetroHeader}" />
     <Style BasedOn="{StaticResource MahApps.Styles.RangeSlider.Win10}" TargetType="{x:Type mah:RangeSlider}" />
     <Style BasedOn="{StaticResource MahApps.Styles.RevealImage}" TargetType="{x:Type mah:RevealImage}" />

@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using System;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -17,7 +18,7 @@ namespace MahApps.Metro.Controls
     [StyleTypedProperty(Property = nameof(HeaderItemContainerStyle), StyleTargetType = typeof(ListBoxItem))]
     [StyleTypedProperty(Property = nameof(SeparatorItemContainerStyle), StyleTargetType = typeof(ListBoxItem))]
     [StyleTypedProperty(Property = nameof(ItemFocusVisualStyle), StyleTargetType = typeof(Control))]
-    public partial class HamburgerMenu
+    public partial class Hamburger
     {
         private ControlTemplate? _defaultItemFocusVisualTemplate = null;
 
@@ -25,13 +26,13 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty OpenPaneLengthProperty
             = DependencyProperty.Register(nameof(OpenPaneLength),
                                           typeof(double),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(240.0, OpenPaneLengthPropertyChangedCallback, OnOpenPaneLengthCoerceValueCallback));
 
         [MustUseReturnValue]
         private static object? OnOpenPaneLengthCoerceValueCallback(DependencyObject dependencyObject, object? inputValue)
         {
-            if (dependencyObject is HamburgerMenu hamburgerMenu && hamburgerMenu.ActualWidth > 0 && inputValue is double openPaneLength)
+            if (dependencyObject is Hamburger hamburgerMenu && hamburgerMenu.ActualWidth > 0 && inputValue is double openPaneLength)
             {
                 // Get the minimum needed width
                 var minWidth = hamburgerMenu.DisplayMode == SplitViewDisplayMode.CompactInline || hamburgerMenu.DisplayMode == SplitViewDisplayMode.CompactOverlay
@@ -71,7 +72,7 @@ namespace MahApps.Metro.Controls
 
         private static void OpenPaneLengthPropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs args)
         {
-            if (args.NewValue != args.OldValue && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (args.NewValue != args.OldValue && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.ChangeItemFocusVisualStyle();
             }
@@ -90,12 +91,12 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty CompactPaneLengthProperty
             = DependencyProperty.Register(nameof(CompactPaneLength),
                                           typeof(double),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(48.0, OnCompactPaneLengthPropertyChangedCallback));
 
         private static void OnCompactPaneLengthPropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.CoerceValue(OpenPaneLengthProperty);
                 hamburgerMenu.ChangeItemFocusVisualStyle();
@@ -115,12 +116,12 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty MinimumOpenPaneLengthProperty
             = DependencyProperty.Register(nameof(MinimumOpenPaneLength),
                                           typeof(double),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(100d, MinimumOpenPaneLengthPropertyChangedCallback));
 
         private static void MinimumOpenPaneLengthPropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.CoerceValue(OpenPaneLengthProperty);
                 hamburgerMenu.ChangeItemFocusVisualStyle();
@@ -140,12 +141,12 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty MaximumOpenPaneLengthProperty
             = DependencyProperty.Register(nameof(MaximumOpenPaneLength),
                                           typeof(double),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(500d, OnMaximumOpenPaneLengthPropertyChangedCallback));
 
         private static void OnMaximumOpenPaneLengthPropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (e.OldValue != e.NewValue && e.NewValue is double && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.CoerceValue(OpenPaneLengthProperty);
                 hamburgerMenu.ChangeItemFocusVisualStyle();
@@ -165,12 +166,12 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty CanResizeOpenPaneProperty
             = DependencyProperty.Register(nameof(CanResizeOpenPane),
                                           typeof(bool),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(BooleanBoxes.FalseBox, OnCanResizeOpenPanePropertyChangedCallback));
 
         private static void OnCanResizeOpenPanePropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != e.NewValue && e.NewValue is bool && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (e.OldValue != e.NewValue && e.NewValue is bool && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.CoerceValue(OpenPaneLengthProperty);
             }
@@ -189,7 +190,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty ResizeThumbStyleProperty
             = DependencyProperty.Register(nameof(ResizeThumbStyle),
                                           typeof(Style),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -205,7 +206,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty PanePlacementProperty
             = DependencyProperty.Register(nameof(PanePlacement),
                                           typeof(SplitViewPanePlacement),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(SplitViewPanePlacement.Left));
 
         /// <summary>
@@ -221,12 +222,12 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty DisplayModeProperty
             = DependencyProperty.Register(nameof(DisplayMode),
                                           typeof(SplitViewDisplayMode),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(SplitViewDisplayMode.CompactInline, OnDisplayModePropertyChangedCallback));
 
         private static void OnDisplayModePropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            if (e.OldValue != e.NewValue && e.NewValue is SplitViewDisplayMode && dependencyObject is HamburgerMenu hamburgerMenu)
+            if (e.OldValue != e.NewValue && e.NewValue is SplitViewDisplayMode && dependencyObject is Hamburger hamburgerMenu)
             {
                 hamburgerMenu.CoerceValue(OpenPaneLengthProperty);
             }
@@ -245,7 +246,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty PaneMarginProperty
             = DependencyProperty.Register(nameof(PaneMargin),
                                           typeof(Thickness),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(new Thickness()));
 
         /// <summary>
@@ -261,7 +262,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty PaneHeaderMarginProperty
             = DependencyProperty.Register(nameof(PaneHeaderMargin),
                                           typeof(Thickness),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(new Thickness()));
 
         /// <summary>
@@ -277,7 +278,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty PaneBackgroundProperty
             = DependencyProperty.Register(nameof(PaneBackground),
                                           typeof(Brush),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -293,7 +294,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty PaneForegroundProperty
             = DependencyProperty.Register(nameof(PaneForeground),
                                           typeof(Brush),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -309,14 +310,14 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty IsPaneOpenProperty
             = DependencyProperty.Register(nameof(IsPaneOpen),
                                           typeof(bool),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new FrameworkPropertyMetadata(BooleanBoxes.FalseBox, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault, IsPaneOpenPropertyChangedCallback));
 
         private static void IsPaneOpenPropertyChangedCallback(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs args)
         {
             if (args.NewValue != args.OldValue)
             {
-                (dependencyObject as HamburgerMenu)?.ChangeItemFocusVisualStyle();
+                (dependencyObject as Hamburger)?.ChangeItemFocusVisualStyle();
             }
         }
 
@@ -329,43 +330,59 @@ namespace MahApps.Metro.Controls
             set => this.SetValue(IsPaneOpenProperty, BooleanBoxes.Box(value));
         }
 
-        /// <summary>Identifies the <see cref="ItemsSource"/> dependency property.</summary>
-        public static readonly DependencyProperty ItemsSourceProperty
-            = DependencyProperty.Register(nameof(ItemsSource),
-                                          typeof(object),
-                                          typeof(HamburgerMenu),
-                                          new PropertyMetadata(null));
 
-        /// <summary>
-        /// Gets or sets an object source used to generate the content of the menu.
-        /// </summary>
-        public object? ItemsSource
+
+        public static readonly DependencyProperty ContentProperty =
+               DependencyProperty.Register(
+                       nameof(Content),
+                       typeof(object),
+                       typeof(Hamburger),
+                       new FrameworkPropertyMetadata(
+                              null)); //new PropertyChangedCallback(OnContentChanged)
+
+        public object? Content
         {
-            get => this.GetValue(ItemsSourceProperty);
-            set => this.SetValue(ItemsSourceProperty, value);
+            get { return GetValue(ContentProperty); }
+            set { SetValue(ContentProperty, value); }
         }
 
-        /// <summary>Identifies the <see cref="ItemContainerStyle"/> dependency property.</summary>
-        public static readonly DependencyProperty ItemContainerStyleProperty
-            = DependencyProperty.Register(nameof(ItemContainerStyle),
-                                          typeof(Style),
-                                          typeof(HamburgerMenu),
-                                          new PropertyMetadata(null));
+        ///// <summary>Identifies the <see cref="ItemsSource"/> dependency property.</summary>
+        //public static readonly DependencyProperty ItemsSourceProperty
+        //    = DependencyProperty.Register(nameof(ItemsSource),
+        //                                  typeof(object),
+        //                                  typeof(Hamburger),
+        //                                  new PropertyMetadata(null));
 
-        /// <summary>
-        /// Gets or sets the <see cref="Style"/> used for each item.
-        /// </summary>
-        public Style? ItemContainerStyle
-        {
-            get => (Style?)this.GetValue(ItemContainerStyleProperty);
-            set => this.SetValue(ItemContainerStyleProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets an object source used to generate the content of the menu.
+        ///// </summary>
+        //public object? ItemsSource
+        //{
+        //    get => this.GetValue(ItemsSourceProperty);
+        //    set => this.SetValue(ItemsSourceProperty, value);
+        //}
+
+        ///// <summary>Identifies the <see cref="ItemContainerStyle"/> dependency property.</summary>
+        //public static readonly DependencyProperty ItemContainerStyleProperty
+        //    = DependencyProperty.Register(nameof(ItemContainerStyle),
+        //                                  typeof(Style),
+        //                                  typeof(Hamburger),
+        //                                  new PropertyMetadata(null));
+
+        ///// <summary>
+        ///// Gets or sets the <see cref="Style"/> used for each item.
+        ///// </summary>
+        //public Style? ItemContainerStyle
+        //{
+        //    get => (Style?)this.GetValue(ItemContainerStyleProperty);
+        //    set => this.SetValue(ItemContainerStyleProperty, value);
+        //}
 
         /// <summary>Identifies the <see cref="HeaderItemContainerStyle"/> dependency property.</summary>
         public static readonly DependencyProperty HeaderItemContainerStyleProperty
             = DependencyProperty.Register(nameof(HeaderItemContainerStyle),
                                           typeof(Style),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>   
@@ -381,7 +398,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty SeparatorItemContainerStyleProperty
             = DependencyProperty.Register(nameof(SeparatorItemContainerStyle),
                                           typeof(Style),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>   
@@ -393,75 +410,75 @@ namespace MahApps.Metro.Controls
             set => this.SetValue(SeparatorItemContainerStyleProperty, value);
         }
 
-        /// <summary>Identifies the <see cref="ItemTemplate"/> dependency property.</summary>
-        public static readonly DependencyProperty ItemTemplateProperty
-            = DependencyProperty.Register(nameof(ItemTemplate),
-                                          typeof(DataTemplate),
-                                          typeof(HamburgerMenu),
-                                          new PropertyMetadata(null));
+        ///// <summary>Identifies the <see cref="ItemTemplate"/> dependency property.</summary>
+        //public static readonly DependencyProperty ItemTemplateProperty
+        //    = DependencyProperty.Register(nameof(ItemTemplate),
+        //                                  typeof(DataTemplate),
+        //                                  typeof(Hamburger),
+        //                                  new PropertyMetadata(null));
 
-        /// <summary>
-        /// Gets or sets the <see cref="DataTemplate"/> used to display each item.
-        /// </summary>
-        public DataTemplate? ItemTemplate
-        {
-            get => (DataTemplate?)this.GetValue(ItemTemplateProperty);
-            set => this.SetValue(ItemTemplateProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets the <see cref="DataTemplate"/> used to display each item.
+        ///// </summary>
+        //public DataTemplate? ItemTemplate
+        //{
+        //    get => (DataTemplate?)this.GetValue(ItemTemplateProperty);
+        //    set => this.SetValue(ItemTemplateProperty, value);
+        //}
 
-        /// <summary>Identifies the <see cref="ItemTemplateSelector"/> dependency property.</summary>
-        public static readonly DependencyProperty ItemTemplateSelectorProperty
-            = DependencyProperty.Register(nameof(ItemTemplateSelector),
-                                          typeof(DataTemplateSelector),
-                                          typeof(HamburgerMenu),
-                                          new PropertyMetadata(null));
+        ///// <summary>Identifies the <see cref="ItemTemplateSelector"/> dependency property.</summary>
+        //public static readonly DependencyProperty ItemTemplateSelectorProperty
+        //    = DependencyProperty.Register(nameof(ItemTemplateSelector),
+        //                                  typeof(DataTemplateSelector),
+        //                                  typeof(Hamburger),
+        //                                  new PropertyMetadata(null));
 
-        /// <summary>
-        /// Gets or sets the <see cref="DataTemplateSelector"/> used to display each item.
-        /// </summary>
-        public DataTemplateSelector? ItemTemplateSelector
-        {
-            get => (DataTemplateSelector?)this.GetValue(ItemTemplateSelectorProperty);
-            set => this.SetValue(ItemTemplateSelectorProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets the <see cref="DataTemplateSelector"/> used to display each item.
+        ///// </summary>
+        //public DataTemplateSelector? ItemTemplateSelector
+        //{
+        //    get => (DataTemplateSelector?)this.GetValue(ItemTemplateSelectorProperty);
+        //    set => this.SetValue(ItemTemplateSelectorProperty, value);
+        //}
 
-        /// <summary>Identifies the <see cref="SelectedItem"/> dependency property.</summary>
-        public static readonly DependencyProperty SelectedItemProperty
-            = DependencyProperty.Register(nameof(SelectedItem),
-                                          typeof(object),
-                                          typeof(HamburgerMenu),
-                                          new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
+        ///// <summary>Identifies the <see cref="SelectedItem"/> dependency property.</summary>
+        //public static readonly DependencyProperty SelectedItemProperty
+        //    = DependencyProperty.Register(nameof(SelectedItem),
+        //                                  typeof(object),
+        //                                  typeof(Hamburger),
+        //                                  new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault));
 
-        /// <summary>
-        /// Gets or sets the selected menu item.
-        /// </summary>
-        public object? SelectedItem
-        {
-            get => this.GetValue(SelectedItemProperty);
-            set => this.SetValue(SelectedItemProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets the selected menu item.
+        ///// </summary>
+        //public object? SelectedItem
+        //{
+        //    get => this.GetValue(SelectedItemProperty);
+        //    set => this.SetValue(SelectedItemProperty, value);
+        //}
 
-        /// <summary>Identifies the <see cref="SelectedIndex"/> dependency property.</summary>
-        public static readonly DependencyProperty SelectedIndexProperty
-            = DependencyProperty.Register(nameof(SelectedIndex),
-                                          typeof(int),
-                                          typeof(HamburgerMenu),
-                                          new FrameworkPropertyMetadata(-1, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal));
+        ///// <summary>Identifies the <see cref="SelectedIndex"/> dependency property.</summary>
+        //public static readonly DependencyProperty SelectedIndexProperty
+        //    = DependencyProperty.Register(nameof(SelectedIndex),
+        //                                  typeof(int),
+        //                                  typeof(Hamburger),
+        //                                  new FrameworkPropertyMetadata(-1, FrameworkPropertyMetadataOptions.BindsTwoWayByDefault | FrameworkPropertyMetadataOptions.Journal));
 
-        /// <summary>
-        /// Gets or sets the selected menu index.
-        /// </summary>
-        public int SelectedIndex
-        {
-            get => (int)this.GetValue(SelectedIndexProperty);
-            set => this.SetValue(SelectedIndexProperty, value);
-        }
+        ///// <summary>
+        ///// Gets or sets the selected menu index.
+        ///// </summary>
+        //public int SelectedIndex
+        //{
+        //    get => (int)this.GetValue(SelectedIndexProperty);
+        //    set => this.SetValue(SelectedIndexProperty, value);
+        //}
 
         /// <summary>Identifies the <see cref="ContentTransition"/> dependency property.</summary>
         public static readonly DependencyProperty ContentTransitionProperty
             = DependencyProperty.Register(nameof(ContentTransition),
                                           typeof(TransitionType),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new FrameworkPropertyMetadata(TransitionType.Normal));
 
         /// <summary>
@@ -477,7 +494,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty ItemCommandProperty
             = DependencyProperty.Register(nameof(ItemCommand),
                                           typeof(ICommand),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -493,7 +510,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty ItemCommandParameterProperty
             = DependencyProperty.Register(nameof(ItemCommandParameter),
                                           typeof(object),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(null));
 
         /// <summary>
@@ -509,7 +526,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty VerticalScrollBarOnLeftSideProperty
             = DependencyProperty.Register(nameof(VerticalScrollBarOnLeftSide),
                                           typeof(bool),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(BooleanBoxes.FalseBox));
 
         /// <summary>
@@ -525,7 +542,7 @@ namespace MahApps.Metro.Controls
         public static readonly DependencyProperty ShowSelectionIndicatorProperty
             = DependencyProperty.Register(nameof(ShowSelectionIndicator),
                                           typeof(bool),
-                                          typeof(HamburgerMenu),
+                                          typeof(Hamburger),
                                           new PropertyMetadata(BooleanBoxes.FalseBox));
 
         /// <summary>
@@ -541,7 +558,7 @@ namespace MahApps.Metro.Controls
         private static readonly DependencyPropertyKey ItemFocusVisualStylePropertyKey
             = DependencyProperty.RegisterReadOnly(nameof(ItemFocusVisualStyle),
                                                   typeof(Style),
-                                                  typeof(HamburgerMenu),
+                                                  typeof(Hamburger),
                                                   new PropertyMetadata(null));
 
         /// <summary>Identifies the <see cref="ItemFocusVisualStyle"/> dependency property.</summary>
@@ -557,24 +574,24 @@ namespace MahApps.Metro.Controls
             protected set => this.SetValue(ItemFocusVisualStylePropertyKey, value);
         }
 
-        /// <summary>
-        /// Gets the collection used to generate the content of the items list.
-        /// </summary>
-        /// <exception cref="Exception">
-        /// Exception thrown if ButtonsListView is not yet defined.
-        /// </exception>
-        public ItemCollection Items
-        {
-            get
-            {
-                if (this.buttonsListView is null)
-                {
-                    throw new Exception("ButtonsListView is not defined yet. Please use ItemsSource instead.");
-                }
+        ///// <summary>
+        ///// Gets the collection used to generate the content of the items list.
+        ///// </summary>
+        ///// <exception cref="Exception">
+        ///// Exception thrown if ButtonsListView is not yet defined.
+        ///// </exception>
+        //public ItemCollection Items
+        //{
+        //    get
+        //    {
+        //        if (this.buttonsListView is null)
+        //        {
+        //            throw new Exception("ButtonsListView is not defined yet. Please use ItemsSource instead.");
+        //        }
 
-                return this.buttonsListView.Items;
-            }
-        }
+        //        return this.buttonsListView.Items;
+        //    }
+        //}
 
         /// <summary>
         /// Executes the <see cref="ItemCommand"/>.
@@ -602,6 +619,46 @@ namespace MahApps.Metro.Controls
 
                 this.SetValue(ItemFocusVisualStylePropertyKey, focusVisualStyle);
             }
+        }
+
+
+
+        public static readonly DependencyProperty ContentTemplateProperty =
+                DependencyProperty.Register(
+                        nameof(ContentTemplate),
+                        typeof(DataTemplate),
+                        typeof(Hamburger),
+                        new FrameworkPropertyMetadata(
+                                null, new PropertyChangedCallback(OnContentTemplateChanged)));
+
+
+        public DataTemplate? ContentTemplate
+        {
+            get { return (DataTemplate?)GetValue(ContentTemplateProperty); }
+            set { SetValue(ContentTemplateProperty, value); }
+        }
+
+        /// 
+
+        ///     Called when ContentTemplateProperty is invalidated on "d."
+        /// 
+
+        private static void OnContentTemplateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+         //   Hamburger ctrl = (Hamburger)d;
+         //   ctrl.OnContentTemplateChanged((DataTemplate)e.OldValue, (DataTemplate)e.NewValue);
+        }
+
+        /// 
+
+        ///     This method is invoked when the ContentTemplate property changes.
+        /// 
+
+        /// The old value of the ContentTemplate property.
+        /// The new value of the ContentTemplate property.
+        protected virtual void OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)
+        {
+           //Helper.CheckTemplateAndTemplateSelector("Content", ContentTemplateProperty, ContentTemplateSelectorProperty, this);
         }
     }
 }

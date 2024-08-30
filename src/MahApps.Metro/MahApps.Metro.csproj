@@ -54,6 +54,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <UpToDateCheckInput Remove="Themes\Hamburger.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
         <Compile Update="Lang\ColorNames.Designer.cs">
             <DesignTime>True</DesignTime>
             <AutoGen>True</AutoGen>
